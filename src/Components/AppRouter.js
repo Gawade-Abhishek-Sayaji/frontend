@@ -1,20 +1,18 @@
-import logo from "./logo.svg";
-import "./App.css";
-import NavBar from "./Components/NavBar";
-
+import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SideBar from "./Components/SideBar";
-import Home from "./Components/Home";
-import Category from "./Components/Category";
-import Products from "./Components/Products";
-import Login from "./Components/Login";
-import PrivateComponent from "./Components/PrivateComponent";
+import SideBar from "./SideBar";
+import Home from "./Home";
+import Category from "./Category";
+import Products from "./Products";
+import Login from "./Login";
+import PrivateComponent from "./PrivateComponent";
+import NavBar from "./NavBar";
 
-function App() {
-  const user = JSON.parse(localStorage.getItem("user"));
+export default function AppRouter() {
   return (
-    <div className="App" style={{ display: "contents" }}>
+    <div>
         <div style={{ display: "contents" }}>
+        
         <NavBar />
         <div style={{ display: "inline-block", marginLeft: "0px" }}>
           <SideBar />
@@ -33,7 +31,5 @@ function App() {
         </div>
       </div>
     </div>
-  );
+  )
 }
-
-export default App;
