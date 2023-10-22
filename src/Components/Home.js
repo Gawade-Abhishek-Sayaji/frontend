@@ -9,4 +9,5 @@ export default function Home() {
        <div> <img src={welcome} alt="welcome" /></div>
     </div>
   )
+  
 }
